@@ -85,6 +85,9 @@ impl ResourceSource for Bundled {
             "assets/horizon/lang/tr_tr.json" => {
                 include_str!("../../horizon-client/assets/horizon/lang/tr_tr.json")
             }
+            "assets/horizon/lang/ms_my.json" => {
+                include_str!("../../horizon-client/assets/horizon/lang/ms_my.json")
+            }
             "assets/horizon/lang/de_de.json" | "assets/horizon/lang/de_at.json" => {
                 include_str!("../../horizon-client/assets/horizon/lang/de_de.json")
             }
@@ -361,6 +364,11 @@ mod tests {
         assert_eq!(en.get("horizon.options.controller"), Some("Controller"));
         let ru = Language::load(&[&empty], "ru_ru");
         assert_eq!(ru.get("horizon.options.controller"), Some("Геймпад"));
+        // Malay, served by Bundled as the others are: its own strings, the
+        // rest in English.
+        let ms = Language::load(&[&empty], "ms_my");
+        assert_eq!(ms.get("horizon.options.vibration"), Some("Getaran"));
+        assert_eq!(ms.get("horizon.options.controller"), Some("Controller"));
         // Every bundled string carries both languages: a key added to one file
         // and forgotten in the other shows as a key name on screen.
         for key in en.map().keys() {
