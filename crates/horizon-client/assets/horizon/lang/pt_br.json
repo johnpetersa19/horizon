@@ -986,5 +986,6 @@
   "starling.controls.analog": "Movimento em 360 graus",
   "starling.controls.analog_hint": "Desligado usa o movimento direcional do Java.",
   "starling.controls.interact_look": "Olhar enquanto interage",
-  "starling.controls.interact_look_hint": "Arraste enquanto ataca, coloca blocos ou usa um item."
+  "starling.controls.interact_look_hint": "Arraste enquanto ataca, coloca blocos ou usa um item.",
+  "System": "Sistema"
 }

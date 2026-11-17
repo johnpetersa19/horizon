@@ -986,5 +986,6 @@
   "The Default preset is protected and cannot be modified": "The Default preset is protected and cannot be modified",
   "Toggle": "Toggle",
   "Apply to all: On": "Apply to all: On",
-  "Apply to all: Off": "Apply to all: Off"
+  "Apply to all: Off": "Apply to all: Off",
+  "System": "System"
 }
