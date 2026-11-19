@@ -46,6 +46,7 @@ mod glass_storage;
 mod glass_toast;
 mod glass_ui;
 mod glass_versions;
+mod glide;
 mod home;
 mod home_tabs;
 mod import_page;
@@ -511,6 +512,8 @@ struct Launcher {
     perf: perf::Perf,
     install_started: Option<Instant>,
     prepare_started: Option<Instant>,
+    /// The version the preparation under way is for: its end checks that one is ready.
+    prepare_tag: Option<String>,
     /// The download under way as first seen (when, files done), for the time left.
     download_seen: Option<(Instant, usize)>,
     /// The tab open under Home's hero (`home_tabs.rs`).
